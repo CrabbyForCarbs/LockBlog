@@ -20,11 +20,11 @@
 		</button>
 		<div class="dashboard">
 			<header>
-				<h1>Welcome to LockBlog Dashboard!</h1>
+				<h1>Welcome to your profile page!</h1>
 				<UserButton />
 			</header>
 			<main>
-				<p>You are successfully signed in!</p>
+				<p>Here you can view your profile information and edit it.</p>
 			</main>
 		</div>
 	</div>

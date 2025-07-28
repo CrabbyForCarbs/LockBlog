@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { SignInButton, SignedIn, SignedOut } from 'svelte-clerk/client';
 	import { goto } from '$app/navigation';
+	import { useClerkContext } from 'svelte-clerk/client';
+	const { clerk } = useClerkContext();
+	const ctx = useClerkContext();
+	const userId = $derived(ctx.auth.userId);
 </script>
 
 <SignedOut>
@@ -22,13 +26,14 @@
 </SignedIn>
 <style>
 	.container {
+		background-color: #ffd005;
+		color: #ffd005;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		min-height: 100vh;
 		width: 100%;
 	}
-	
 	.signin-btn {
 		background-color: white;
 		color: black;
@@ -40,7 +45,6 @@
 		cursor: pointer;
 		transition: all 0.2s ease;
 	}
-	
 	.signin-btn:hover {
 		background-color: #f0f0f0;
 		transform: translateY(-2px);

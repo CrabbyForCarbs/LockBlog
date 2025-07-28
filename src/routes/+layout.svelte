@@ -7,5 +7,7 @@
 </script>
 
 <ClerkProvider publishableKey={PUBLIC_CLERK_PUBLISHABLE_KEY}>
+  <header class="flex items-center justify-between p-4">
+  </header>
 	{@render children()}
 </ClerkProvider>
